@@ -32,3 +32,6 @@ const oAuth2Client = new google.auth.OAuth2(
   redirect_uris[0]
 );
 
+
+module.exports.getAuthURL = async () => {
+
