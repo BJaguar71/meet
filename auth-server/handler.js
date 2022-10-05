@@ -35,3 +35,26 @@ const oAuth2Client = new google.auth.OAuth2(
 
 module.exports.getAuthURL = async () => {
 
+   /**
+   *
+   * Scopes array passed to the `scope` option. Any scopes passed must be enabled in the
+   * "OAuth consent screen" settings in your project on your Google Console. Also, any passed
+   *  scopes are the ones users will see when the consent screen is displayed to them.
+   *
+   */
+
+  const authUrl = oAuth2Client.generateAuthUrl({
+    access_type: "offline",
+    scope: SCOPES,
+  });
+
+  return {
+    statusCode: 200,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+    body: JSON.stringify({
+      authUrl: authUrl,
+    }),
+  };
+};
