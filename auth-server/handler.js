@@ -17,7 +17,7 @@ const credentials = {
   token_uri: "https://oauth2.googleapis.com/token",
   auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
   redirect_uris: [
-    "https://bjaguar71.github.io/meet"
+    "https://bjaguar71.github.io/meet/"
   ],
   javascript_origins: [
     "https://bjaguar71.github.io",
